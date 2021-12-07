@@ -54,6 +54,22 @@ function renderModal(id) {
     elmodal.innerHTML = strHtml
 }
 
+
 function onSubmit() {
+    console.log('hi');
+    var userMail = $('.mail').val()
+    $('.mail').val('')
+    // $('.mail').attr("placeholder", "Type here to search");
+    var sub = $('.sub').val()
+    $('.sub').val('')
+    var msg = $('.msg-body').val()
+    $('.msg-body').val('')
+    console.log('userMail:', userMail);
+
+    const mail = `https://mail.google.com/mail/?view=cm&fs=1&to=${userMail}&su=${sub}&body=${msg}`
+    window.open(mail, "_self")
+
+
+
 
 }
