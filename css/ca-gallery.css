@@ -769,6 +769,7 @@ fieldset[disabled] .btn-xl:hover {
 }
 
 
-.new-class{
-    background-color:forestgreen ;
+.msg-Body{
+    height: 450px;
+    background-color: aqua;
 }

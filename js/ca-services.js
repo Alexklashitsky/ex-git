@@ -1,27 +1,16 @@
-
+'use strict'
 const key = 'galleryDB'
 
 var gProj = _createProjs()
-console.log('gProj:', gProj);
 
 
 
 
 
-const item = {
-    id: "Threads",
-    name: "Threads",
-    title: "Illustration",
-    desc: "lorem ipsum lorem ipsum lorem ipsum",
-    url: "img/portfolio/01-thumbnail.jpg",
-    publishedAt: Date.now(),
 
-    labels: ["Matrixes", "keyboard events"]
-
-}
 function _createProjs() {
     var projs = []
-    var a = _createPorj('Threads', 'Threads', 'Illustration', 'lorem', "img/portfolio/01-thumbnail.jpg", ['matrix', 'css'])
+    var a = _createPorj('aa', 'Threads', 'Illustration', 'lorem', "img/portfolio/01-thumbnail.jpg", ['matrix', 'css'])
     projs.push(a)
     var b = _createPorj('Finish', 'Finish', 'muted', 'lorem', "img/portfolio/03-thumbnail.jpg", ['matrix', 'css'])
     projs.push(b)
@@ -60,3 +49,35 @@ function getProjs() {
 
 
 
+function getPorjById(id) {
+    const proj = gProj.find((pro) => {
+        return pro.id === id
+    })
+    return proj
+}
+
+
+
+// function getModalData(title) {
+//     const projIdx = getProjs.findIndex(function (proj.title) {
+//         return title === proj.titel
+//     }
+
+// //     const modal = {
+// //         name: gProj[projIdx].name,
+// //         img: gProj[projIdx].url,
+// //         desc: gProj[projIdx].decs,
+// //         date: gProj[projIdx].publishedAt,
+// //         clint: 'lorem',
+// //         Category: gProj[projIdx].name
+// //     }
+// //     return modal
+// // }
+
+
+// function removeBook(bookId) {
+//     const bookIdx = gBooks.findIndex(function (book) {
+//         return bookId === book.id
+
+//     }
+// }
